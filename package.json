@@ -1,0 +1,23 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "A Express.js app\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dn Express.js app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaulACoroneos/friend-finder.git"
+  },
+  "author": "Paul Coroneos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaulACoroneos/friend-finder/issues"
+  },
+  "homepage": "https://github.com/PaulACoroneos/friend-finder#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
