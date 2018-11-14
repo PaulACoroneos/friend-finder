@@ -7,36 +7,37 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-10 mx-auto">
-                <div class="jumbotron">
-                    <h3 class="text-center display-4">Friend Survey Questions</h3>
+                <div class="jumbotron mt-3">
+                    <h3 class="text-center display-3"><i class="fas fa-poll-h"></i> Friend Survey</h3>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-8 mx-auto">
+            <div class="col-9 mx-auto border-round pb-2 pt-2 survey">
                 <form>
                     <span class="section-title">About you</span> <br />
                     <div class="form-group">
                         <label for="name" class="q-title">Name</label>
-                        <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter your name">
+                        <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter your name" required>
                         <small id="emailHelp" class="form-text text-muted">Required</small>
                     </div>
                     <div class="form-group">
                         <label for="name" class="q-title">Link to photo image</label>
-                        <input type="text" class="form-control" id="photo" aria-describedby="photo" placeholder="photo URL">
+                        <input type="text" class="form-control" id="photo" aria-describedby="photo" placeholder="photo URL" required>
                         <small id="emailHelp" class="form-text text-muted">Required</small>
                     </div>
                     <span class="section-title">Personality Questions</span> <br />
                     <div class="form-group">
                         <span class="q-title">Question 1</span><br />
-                        <label for="exampleFormControlSelect1">Who is your daddy?</label>
-                        <select class="form-control selectpicker" id="q1">
+                        <label for="q1">You should always speak up when you feel wronged.</label>
+                        <select class="form-control" id="q1">
                             <option>1 (strongly agree)</option>
                             <option>2</option>
                             <option>3</option>
@@ -46,7 +47,7 @@
                     </div>
                     <div class="form-group">
                         <span class="q-title">Question 2</span><br />
-                        <label for="exampleFormControlSelect1">Question 2</label>
+                        <label for="q2">It is okay to break the rules sometimes.</label>
                         <select class="form-control" id="q2">
                             <option>1 (strongly agree)</option>
                             <option>2</option>
@@ -57,7 +58,7 @@
                     </div>
                     <div class="form-group">
                         <span class="q-title">Question 3</span><br />
-                        <label for="exampleFormControlSelect1">Question 3</label>
+                        <label for="q3">You feel comfortable in large groups.</label>
                         <select class="form-control" id="q3">
                             <option>1 (strongly agree)</option>
                             <option>2</option>
@@ -68,7 +69,7 @@
                     </div>
                     <div class="form-group">
                         <span class="q-title">Question 4</span><br />
-                        <label for="exampleFormControlSelect1">Question 4</label>
+                        <label for="q4">It's better to be right than to avoid conflict.</label>
                         <select class="form-control" id="q4">
                             <option>1 (strongly agree)</option>
                             <option>2</option>
@@ -79,7 +80,7 @@
                     </div>
                     <div class="form-group">
                         <span class="q-title">Question 5</span><br />
-                        <label for="exampleFormControlSelect1">Question 5</label>
+                        <label for="q5">You constantly challenge the status quo.</label>
                         <select class="form-control" id="q5">
                             <option>1 (strongly agree)</option>
                             <option>2</option>
@@ -90,7 +91,7 @@
                     </div>
                     <div class="form-group">
                         <span class="q-title">Question 6</span><br />
-                        <label for="exampleFormControlSelect1">Question 6</label>
+                        <label for="q6">You have a large group of friends you talk to versus a select few.</label>
                         <select class="form-control" id="q6">
                             <option>1 (strongly agree)</option>
                             <option>2</option>
@@ -101,7 +102,7 @@
                     </div>
                     <div class="form-group">
                         <span class="q-title">Question 7</span><br />
-                        <label for="exampleFormControlSelect1">Question 7</label>
+                        <label for="q7">You think a tomato is a fruit, not a vegetable.</label>
                         <select class="form-control" id="q7">
                             <option>1 (strongly agree)</option>
                             <option>2</option>
@@ -112,7 +113,7 @@
                     </div>
                     <div class="form-group">
                         <span class="q-title">Question 8</span><br />
-                        <label for="exampleFormControlSelect1">Question 8</label>
+                        <label for="q8">It is better to have tried and failed rather than not try at all.</label>
                         <select class="form-control" id="q8">
                             <option>1 (strongly agree)</option>
                             <option>2</option>
@@ -123,7 +124,7 @@
                     </div>
                     <div class="form-group">
                         <span class="q-title">Question 9</span><br />
-                        <label for="exampleFormControlSelect1">Question 9</label>
+                        <label for="q9">You would pick an African over European swallow.</label>
                         <select class="form-control" id="q9">
                             <option>1 (strongly agree)</option>
                             <option>2</option>
@@ -134,7 +135,7 @@
                     </div>
                     <div class="form-group">
                         <span class="q-title">Question 10</span><br />
-                        <label for="exampleFormControlSelect1">Question 10</label>
+                        <label for="q10">Quizzes are a great way to encapsulate whether you are compatible with a person or not.</label>
                         <select class="form-control" id="q10">
                             <option>1 (strongly agree)</option>
                             <option>2</option>
@@ -143,14 +144,15 @@
                             <option>5 (strongly disagree)</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary col-12">Submit</button>
+                    <button type="submit" class="btn btn-info col-12">Submit</button>
                 </form>
             </div>
         </div>
-
         <!-- footer -->
-        <div class="col-6 mx-left">
-            <span><a href="#">API Friends List</a> | <a href="#">Github Link</a></span>
+        <div class="row">
+            <div class="col-9 mx-auto mt-2">
+                <span><a href="#">API Friends List</a> | <a href="#">Github Link</a></span>
+            </div>
         </div>
     </div>
 
