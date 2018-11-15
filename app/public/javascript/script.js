@@ -1,26 +1,29 @@
-// In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+
+    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
 // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
 // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
 // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
 
 $(".submit").on("click", function(event) {
     event.preventDefault();
+    console.log("clicky2");
 
     // Here we grab the form elements
     var newFriend = {
         friendName: $("#name").val().trim(),
         friendPhoto: $("#photo").val().trim(),
-        question1: $("#q1").val().trim(),
-        question2: $("#q2").val().trim(),
-        question3: $("#q3").val().trim(),
-        question4: $("#q4").val().trim(),
-        question5: $("#q5").val().trim(),
-        question6: $("#q6").val().trim(),
-        question7: $("#q7").val().trim(),
-        question8: $("#q8").val().trim(),
-        question9: $("#q9").val().trim(),
-        question10: $("#q10").val().trim(),
-
+        scores:[ 
+        $("#q1").val().trim(),
+        $("#q2").val().trim(),
+        $("#q3").val().trim(),
+        $("#q4").val().trim(),
+        $("#q5").val().trim(),
+        $("#q6").val().trim(),
+        $("#q7").val().trim(),
+        $("#q8").val().trim(),
+        $("#q9").val().trim(),
+        $("#q10").val().trim()
+        ]
 };
 
 console.log(newFriend);
@@ -32,16 +35,6 @@ console.log(newFriend);
 
 $.post("/api/friends", newFriend,
     function(data) {
-
-    // If a table is available... tell user they are booked.
-    if (data) {
-        alert("Yay! You are officially booked!");
-    }
-
-    // If a table is available... tell user they on the waiting list.
-    else {
-        alert("Sorry you are on the wait list");
-    }
 
     // Clear the form when submitting
     $("#name").val("");

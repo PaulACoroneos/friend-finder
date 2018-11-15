@@ -30,15 +30,9 @@ module.exports = function(app) {
   // Then the server saves the data to the tableData array)
   // ---------------------------------------------------------------------------
 
-//   app.post("/api/tables", function(req, res) {
-//     if (tableData.length < 5) {
-//       tableData.push(req.body);
-//       res.json(true);
-//     }
-//     else {
-//       waitListData.push(req.body);
-//       res.json(false);
-//     }
-//   });
+  app.post("/api/friends", function(req, res) {
+    friendData.push(req.body);
+    res.json(friendData);
+  });
 
-};
+}
