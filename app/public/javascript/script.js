@@ -35,25 +35,9 @@ console.log(newFriend);
 
 $.post("/api/friends", newFriend,
     function(data) {
-
-    // Clear the form when submitting
-    $("#name").val("");
-    $("#photo").val("");
-    $("#q1").val("");
-    $("#q2").val("");
-    $("#q3").val("");
-    $("#q4").val("");
-    $("#q5").val("");
-    $("#q6").val("");
-    $("#q7").val("");
-    $("#q8").val("");
-    $("#q9").val("");
-    $("#q10").val("");
-    
-    // call function to calculate best friend
-    totalDifference(newFriend);
+        // call function to calculate best friend
+        totalDifference(newFriend);
     });
-
 });
 
 function totalDifference(newFriend) {
@@ -79,5 +63,15 @@ function totalDifference(newFriend) {
         const bestFriend = scoresArr.indexOf(Math.min(...scoresArr));
         console.log("bestie ",bestFriend);
 
+        $('#friendModal').modal('show'); 
+
       });
 }
+
+// $(".closeBtnModal").on("click", function(event) {
+//     event.preventDefault();
+//     $.ajax({ url: "/", method: "GET" })
+//     .then(function(friendData) {
+//         console.log("that's all folks!")
+//     });
+// });
