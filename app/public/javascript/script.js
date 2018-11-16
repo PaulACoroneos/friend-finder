@@ -49,7 +49,35 @@ $.post("/api/friends", newFriend,
     $("#q8").val("");
     $("#q9").val("");
     $("#q10").val("");
-
+    
+    // call function to calculate best friend
+    totalDifference(newFriend);
     });
 
 });
+
+function totalDifference(newFriend) {
+    console.log("hi",newFriend);
+    // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+    $.ajax({ url: "/api/friends", method: "GET" })
+      .then(function(friendData) {
+
+        let scoresArr = [];
+        let sumDiff = 0;
+        console.log("returned friend data",friendData);
+
+        // Loop through and calculate coefficient
+        for (let i = 0; i < friendData.length-1; i++) {
+            for(let j = 0; j<friendData[i].scores.length; j++) {
+                sumDiff += Math.abs(newFriend.scores[j] -friendData[i].scores[j]);
+            }
+            scoresArr.push(sumDiff);
+            sumDiff=0;
+        }
+
+        console.log("summed scores ",scoresArr);
+        const bestFriend = scoresArr.indexOf(Math.min(...scoresArr));
+        console.log("bestie ",bestFriend);
+
+      });
+}
