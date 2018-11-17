@@ -26,3 +26,7 @@ html,body {
     background-color:#528B8B;
     border:2px solid #008080;
 }
+#friendPhoto {
+    width:300px;
+    height:auto;
+}
