@@ -1,7 +1,7 @@
 var friendsData = [
     {
-        "name":"Ahmed",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "name":"Elmo",
+        "photo":"https://upload.wikimedia.org/wikipedia/en/7/74/Elmo_from_Sesame_Street.gif",
         "scores":[
             5,
             1,

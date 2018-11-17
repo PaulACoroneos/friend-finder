@@ -10,8 +10,8 @@ $(".submit").on("click", function(event) {
 
     // Here we grab the form elements
     var newFriend = {
-        friendName: $("#name").val().trim(),
-        friendPhoto: $("#photo").val().trim(),
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
         scores:[ 
         $("#q1").val().trim(),
         $("#q2").val().trim(),
@@ -61,8 +61,13 @@ function totalDifference(newFriend) {
 
         console.log("summed scores ",scoresArr);
         const bestFriend = scoresArr.indexOf(Math.min(...scoresArr));
-        console.log("bestie ",bestFriend);
+        console.log("bestie ",friendData[bestFriend]);
+        console.log("best name ",friendData[bestFriend].name);
+        console.log("best photo ", friendData[bestFriend].photo);
 
+        //let's pass info to the modal then show it
+        $("#friendModal #friendName").text("Your new best friend is: "+ friendData[bestFriend].name);
+        $("#friendModal #friendPhoto").attr('src',friendData[bestFriend].photo);
         $('#friendModal').modal('show'); 
 
       });
